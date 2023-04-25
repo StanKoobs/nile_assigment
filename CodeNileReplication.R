@@ -26,20 +26,6 @@ OwnggTheme <- function() {
   ) 
 }
 
-# Synthetic data
-sigmaeta <- 1
-sigmaeps <- 1
-
-n = 100
-alpha1 <- 0
-alpha <- c(alpha1)
-y <- c()
-
-for (t in 1:n) {
-  alpha[t + 1] <- alpha[t] + rnorm(1, 0, sigmaeta)
-  y[t] <- alpha[t] + rnorm(1, 0, sigmaeps)
-}
-
 # Loading the data 
 library(readxl)
 df <- read_excel("nile.xlsx")
